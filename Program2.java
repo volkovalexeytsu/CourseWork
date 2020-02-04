@@ -32,9 +32,11 @@ public class Program2 {
 		Pattern pat = Pattern.compile("[-]?[0-9]+(,[0-9]+)?");
 		Matcher matcher=pat.matcher(lex);
 		if(matcher.find()) {
-			if (typeArray[ipos - 1].equals("var")) {
-				return "_{" + lex + "}";
-			} else { return lex;}
+			if (ipos>0) { 
+				if (typeArray[ipos - 1].equals("var")) {
+					return "_{" + lex + "}";
+				} else { return lex;} 
+			} else {return lex;}
 		} else {
 			switch (lex) {
 				case "СУММА":
