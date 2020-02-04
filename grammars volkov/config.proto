@@ -11,7 +11,7 @@ TTextMinerConfig {
   }
 
   Articles = [
-    { Name = "РодилсяВ" }
+    { Name = "mat" }
   ]
 
   Facts = [

@@ -6,7 +6,7 @@ import "kwtypes_my.proto";
 
 import "facttypes.proto";
 
-TAuxDicArticle "РодилсяВ"
+TAuxDicArticle "mat"
 {
     key = { "tomita:bornin.cxx" type=CUSTOM }
 }
