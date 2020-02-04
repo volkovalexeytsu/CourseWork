@@ -37,10 +37,6 @@ public class Program2 {
 			} else { return lex;}
 		} else {
 			switch (lex) {
-				//ЧТО С ПАДЕЖАМИ!?!?!?!
-				//TODO равенства, СКОБКИ
-				//TODO пробелы между выражениями, красоту
-				//WARNING! Аккуратней с падежами
 				case "СУММА":
 					return StrSumProd("\\sum");
 				case "ПРОИЗВЕДЕНИЕ":
@@ -130,7 +126,7 @@ public class Program2 {
 				case "ИГРИК":
 					typeArray[ipos] = "var";
 					return "y ";
-				case "БЕСКОНЕЧНОСТЬ": //БЕСКОНЕЧНОСТИ?
+				case "БЕСКОНЕЧНОСТЬ": 
 					return "\\infty ";
 				case "ЧЕРТОЧКА":
 					return "\\overline ";
@@ -142,11 +138,10 @@ public class Program2 {
 					return "!";
 				case "МОДУЛЬ":
 					return StrFunctions("\\left |","\\right |");
-				case "МНОЖЕСТВО": //Принадлежит множествУ //Супремум множествА
+				case "МНОЖЕСТВО": 
 					return StrFunctions("\\{","\\}");
-				case "ИНДЕКС": //Порядковый номер???
+				case "ИНДЕКС": 
 					return StrFunctions("_{","}");
-				//КОРЕНЬ КВАДРАТНЫЙ - бывают и другие
 				case "КОРЕНЬ":
 					return StrFunctions("\\sqrt{","}");
 				//Степень
@@ -248,84 +243,11 @@ public class Program2 {
 			}
 			ipos++;
 		}
-		ipos++; //WARNING! Аккуратней с падежами
+		ipos++;
 		arg1 = arg1 + arg2;
 		return arg1;
 	}
 	
-	
-	/*public static String StrIndex() {
-		ipos++;
-		String ind = "_{";
-		while (!parseArray[ipos].equals("КОНЕЦ")) {
-			ind = ind + GlobalExpr(parseArray[ipos]);
-			//Проверка ошибок
-			if (ipos == parseArray.length - 1) {
-				System.out.println("Не обозначен конец Индекса");
-				System.exit(0);
-			}
-			ipos++;
-		}
-		ipos++; //WARNING! Аккуратней с падежами
-		ind = ind + "}";
-		return ind;
-	}*/
-	
-	//Степень в строке
-	/*public static String StrStep() {
-		ipos = ipos + 2;
-		String step = "^{";
-		while (!parseArray[ipos].equals("КОНЕЦ")) {
-			step = step + GlobalExpr(parseArray[ipos]);
-			//Проверка ошибок
-			if (ipos == parseArray.length - 1) {
-				System.out.println("Не обозначен конец Степени");
-				System.exit(0);
-			}
-			ipos++;
-		}
-		ipos++; //WARNING! Аккуратней с падежами
-		step = step + "}";
-		return step;
-	}*/
-	
-	//Модуль в строке
-	/*public static String StrModule() {
-		ipos++; 
-		String mod = "\\left |";
-		while (!parseArray[ipos].equals("КОНЕЦ")) {
-			mod = mod + GlobalExpr(parseArray[ipos]);
-			//Проверка ошибок
-			if (ipos == parseArray.length - 1) {
-				System.out.println("Не обозначен конец модуля");
-				System.exit(0);
-			}
-			ipos++;
-		}
-		ipos++; //WARNING! Аккуратней с падежами
-		mod = mod + "\\right |";
-		return mod;
-	}*/
-	
-	//Множество в строке
-	/*public static String StrMnoj() {
-		ipos++; 
-		String mnoj = "\\{";
-		while (!parseArray[ipos].equals("КОНЕЦ")) {
-			mnoj = mnoj + GlobalExpr(parseArray[ipos]);
-			//Проверка ошибок
-			if (ipos == parseArray.length - 1) {
-				System.out.println("Не обозначен конец множества");
-				System.exit(0);
-			}
-			ipos++;
-		}
-		ipos++; //WARNING! Аккуратней с падежами
-		mnoj = mnoj + "\\}";
-		return mnoj;
-	}*/
-	
-	//ПО... ОТ... ДО...?
 	public static String StrSumProd(String f) {
 		ipos++; 
 		String leftSide = f + "^{";
@@ -399,7 +321,7 @@ public class Program2 {
 			}
 			ipos++;
 		}
-		ipos++; //WARNING! Аккуратней с падежами
+		ipos++; 
 		trig = trig + ")";
 		return trig;
 	    }
@@ -419,7 +341,7 @@ public class Program2 {
 			}
 			ipos++;
 		}
-		ipos++; //WARNING! Аккуратней с падежами
+		ipos++; 
 		frac = frac + "}{";
 		//Знаменатель
 		while (!parseArray[ipos].equals("КОНЕЦ")) {
@@ -563,7 +485,7 @@ public class Program2 {
 		System.setProperty("file.encoding", "UTF-8");
         try {
 			//файл, который хранит свойства нашего проекта
-			File file = new File("c:/java/data.properties");
+			File file = new File("data.properties");
 
 			//создаем объект Properties и загружаем в него данные из файла.
 			Properties properties = new Properties();
