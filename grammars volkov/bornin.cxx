@@ -2,7 +2,7 @@
 #GRAMMAR_ROOT L
 Variable -> Noun<kwtype=variable>;
 Strem -> "стремящемс";
-Function -> Noun<kwtype=function> Variable "конец";
+Function -> Noun<kwtype=function> Variable "конец" "функ";
 Num -> AnyWord<wff=/[1-9]?[0-9]{1,6}/>;
 
 S -> "предел" Function interp(Predel.Function) "при" Variable interp(Predel.Variable) Strem "к" Num interp(Predel.To) "конец" "пред";
