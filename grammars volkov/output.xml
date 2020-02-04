@@ -7,12 +7,14 @@
         <Znamenatel val="ПРЕДЕЛ СИНУС ИКС КОНЕЦ ПРИ ИКС СТРЕМЯЩЕМС К 0 КОНЕЦ ПРЕДЕЛ" pos="62" len="58"/>
       </Fraction>
       <Predel FactID="1" LeadID="1" FieldsInfo="n0;n1;n2;" pos="7" len="38" sn="0" fw="0" lw="22">
-        <Function val="СИНУС ИКС КОНЕЦ" pos="7" len="15"/><Variable val="ИКС" pos="27" len="3"/>
+        <Function val="СИНУС ИКС КОНЕЦ" pos="7" len="15"/>
+        <Variable val="ИКС" pos="27" len="3"/>
         <To val="0" pos="44" len="1"/>
       </Predel>
       <Predel FactID="2" LeadID="1" FieldsInfo="n3;n4;n5;" pos="69" len="38" sn="0" fw="0" lw="22">
         <Function val="СИНУС ИКС КОНЕЦ" pos="69" len="15"/>
-        <Variable val="ИКС" pos="89" len="3"/><To val="0" pos="106" len="1"/>
+        <Variable val="ИКС" pos="89" len="3"/>
+        <To val="0" pos="106" len="1"/>
       </Predel>
     </facts>
     <Leads>
@@ -24,8 +26,12 @@
   <facts>
     <Fraction FactID="0" LeadID="0" FieldsInfo="n0;n1;" pos="0" len="67" sn="0" fw="0" lw="12">
       <Chislitel val="ПРЕДЕЛ СИНУС ИКС КОНЕЦ ПРИ ИКС СТРЕМЯЩЕМС К 0 КОНЕЦ ПРЕДЕЛ" pos="0" len="58"/>
-  <Znamenatel val="21000" pos="62" len="5"/></Fraction><Predel FactID="1" LeadID="1" FieldsInfo="n0;n1;n2;" pos="7" len="38" sn="0" fw="0" lw="12">
-    <Function val="СИНУС ИКС КОНЕЦ" pos="7" len="15"/><Variable val="ИКС" pos="27" len="3"/><To val="0" pos="44" len="1"/>
+      <Znamenatel val="21000" pos="62" len="5"/>
+    </Fraction>
+    <Predel FactID="1" LeadID="1" FieldsInfo="n0;n1;n2;" pos="7" len="38" sn="0" fw="0" lw="12">
+      <Function val="СИНУС ИКС КОНЕЦ" pos="7" len="15"/>
+      <Variable val="ИКС" pos="27" len="3"/>
+      <To val="0" pos="44" len="1"/>
     </Predel>
   </facts>
   <Leads>
