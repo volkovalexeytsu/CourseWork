@@ -1,0 +1,17 @@
+import "base.proto";
+import "facttypes_base.proto";
+
+message Predel: NFactType.TFact 
+{
+    required string Function = 1 [ (NFactType.normcase) = CAMEL_CASE ];
+    required string Variable = 2 [ (NFactType.normcase) = CAMEL_CASE ]; 
+    required string To = 3 [ (NFactType.normcase) = CAMEL_CASE ]; 
+}
+
+message Fraction: NFactType.TFact 
+{
+    optional string Chislitel = 1 [ (NFactType.normcase) = CAMEL_CASE ] ; 
+    optional string Znamenatel = 2 [ (NFactType.normcase) = CAMEL_CASE ] ;
+}
+
+

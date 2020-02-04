@@ -1,0 +1,23 @@
+encoding "utf8";
+
+import "base.proto";     
+import "articles_base.proto";
+import "kwtypes_my.proto";
+
+import "facttypes.proto";
+
+TAuxDicArticle "РодилсяВ"
+{
+    key = { "tomita:bornin.cxx" type=CUSTOM }
+}
+
+
+function "Синус"
+{
+    key = "Синус";
+}
+
+variable "икс"
+{
+    key = "икс";
+}
