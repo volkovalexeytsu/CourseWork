@@ -14,4 +14,9 @@ message Fraction: NFactType.TFact
     optional string Znamenatel = 2 [ (NFactType.normcase) = CAMEL_CASE ] ;
 }
 
+message Sqrt: NFactType.TFact 
+{
+	optional string Recursion = 1;
+	required string Value = 2;
+}
 

@@ -6,7 +6,7 @@ TTextMinerConfig {
   PrettyOutput = "debug.html";
 
   Input = {
-    File = "test.txt";
+//File = "test.txt";
     Type = dpl;
   }
 
@@ -17,10 +17,11 @@ TTextMinerConfig {
   Facts = [
     { Name = "Predel" }
  { Name = "Fraction" }
+{Name = "Sqrt" }
   ]
 
   Output = { 
-    File = "output.xml";
+//File = "output.xml";
     Format = xml;
   }
 }
